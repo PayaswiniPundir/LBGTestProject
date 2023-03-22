@@ -44,8 +44,11 @@ class LoginViewController: UIViewController {
             .store(in: &bindings)
         passwordTextField.textPublisher
             .receive(on: RunLoop.main)
-            .assign(to: \.login, on: viewModel)
+            .assign(to: \.password, on: viewModel)
             .store(in: &bindings)
+        viewModel.isInputValid
+                .assign(to: \.isValid, on: signInButton)
+                .store(in: &bindings)
         viewModel.validationResult.sink { completion in
             switch completion {
             case .finished:
@@ -60,25 +63,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func signInButtonTap(_sender: AnyObject) {
-        if isVerifiedLogin() {
             viewModel.validateLogin()
-        }
     }
     
     private func navigateToHome() {
         let homeViewController = HomeViewController()
         navigationController?.pushViewController(homeViewController, animated: true)
-    }
-    
-    private func isVerifiedLogin() -> Bool {
-        if !(emailTextField.text?.count ?? 0 > 0 &&
-             passwordTextField.text?.count ?? 0 > 0) {
-            AlertManager.showAlert(forMessage: Strings.loginAlertMessage,
-                                   title: Strings.loginAlertTitle,
-                                   defaultButtonTitle: Strings.loginAlertDefaultBtn,
-                                   sourceViewController: self)
-            return false
-        }
-        return true
     }
 }

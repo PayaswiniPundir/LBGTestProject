@@ -28,6 +28,7 @@ final class HomeViewController: UIViewController {
         setupView()
         setupBindings()
         view.accessibilityIdentifier = Strings.homeTableViewAccessibility
+        homeTableView.accessibilityIdentifier = Strings.homeTableViewAccessibility
     }
     
     private func setupView() {

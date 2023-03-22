@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0E3256FA29C863CA008C2FAF /* LoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3256F929C863CA008C2FAF /* LoginViewUITests.swift */; };
 		0E3256FC29C86CE2008C2FAF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3256FB29C86CE2008C2FAF /* UITextField.swift */; };
+		0E32570029CB3AF3008C2FAF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3256FF29CB3AF3008C2FAF /* String.swift */; };
+		0E32570229CB6406008C2FAF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32570129CB6406008C2FAF /* UIButton.swift */; };
+		0E32571029CB8A16008C2FAF /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32570F29CB8A16008C2FAF /* MockUserService.swift */; };
+		0E32571229CB8AA0008C2FAF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */; };
+		0E32571629CB8DE7008C2FAF /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32571529CB8DE7008C2FAF /* HomeViewUITests.swift */; };
 		0EE5414F29C85B910019194E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5414E29C85B910019194E /* UserService.swift */; };
 		0EF6233B29C3963A00CF7FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6233A29C3963A00CF7FAC /* AppDelegate.swift */; };
 		0EF6233D29C3963A00CF7FAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6233C29C3963A00CF7FAC /* SceneDelegate.swift */; };
@@ -57,6 +62,11 @@
 /* Begin PBXFileReference section */
 		0E3256F929C863CA008C2FAF /* LoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITests.swift; sourceTree = "<group>"; };
 		0E3256FB29C86CE2008C2FAF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		0E3256FF29CB3AF3008C2FAF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		0E32570129CB6406008C2FAF /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		0E32570F29CB8A16008C2FAF /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0E32571529CB8DE7008C2FAF /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
 		0EE5414E29C85B910019194E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0EF6233729C3963A00CF7FAC /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF6233A29C3963A00CF7FAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +153,7 @@
 				0EF6237729C495B100CF7FAC /* Login */,
 				0EF6237829C4962800CF7FAC /* Home */,
 				0EF6237229C469F800CF7FAC /* Extensions */,
+				0EF623B229C77A1B00CF7FAC /* Mocks */,
 				0EF6233A29C3963A00CF7FAC /* AppDelegate.swift */,
 				0EF6233C29C3963A00CF7FAC /* SceneDelegate.swift */,
 				0EF6234029C3963A00CF7FAC /* Main.storyboard */,
@@ -158,8 +169,8 @@
 		0EF6235029C3963C00CF7FAC /* iOSAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0EF623B229C77A1B00CF7FAC /* Mocks */,
 				0EF623AC29C7705E00CF7FAC /* LoginViewModelTests.swift */,
+				0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */,
 			);
 			path = iOSAppTests;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3256F929C863CA008C2FAF /* LoginViewUITests.swift */,
+				0E32571529CB8DE7008C2FAF /* HomeViewUITests.swift */,
 			);
 			path = iOSAppUITests;
 			sourceTree = "<group>";
@@ -177,6 +189,8 @@
 			children = (
 				0EF6239D29C62B4000CF7FAC /* UIColor.swift */,
 				0E3256FB29C86CE2008C2FAF /* UITextField.swift */,
+				0E3256FF29CB3AF3008C2FAF /* String.swift */,
+				0E32570129CB6406008C2FAF /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF623AE29C772B400CF7FAC /* MockLoginManager.swift */,
+				0E32570F29CB8A16008C2FAF /* MockUserService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -442,8 +457,10 @@
 				0EF6238429C5A46400CF7FAC /* HomeTableViewCell.swift in Sources */,
 				0EF6239829C6280B00CF7FAC /* Font.swift in Sources */,
 				0EF6233D29C3963A00CF7FAC /* SceneDelegate.swift in Sources */,
+				0E32570029CB3AF3008C2FAF /* String.swift in Sources */,
 				0EF6237429C46E4100CF7FAC /* HomeViewController.swift in Sources */,
 				0EF623B129C7795800CF7FAC /* UserModel.swift in Sources */,
+				0E32570229CB6406008C2FAF /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E32571029CB8A16008C2FAF /* MockUserService.swift in Sources */,
+				0E32571229CB8AA0008C2FAF /* HomeViewModelTests.swift in Sources */,
 				0EF623AD29C7705E00CF7FAC /* LoginViewModelTests.swift in Sources */,
 				0EF623AF29C772B400CF7FAC /* MockLoginManager.swift in Sources */,
 			);
@@ -461,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E3256FA29C863CA008C2FAF /* LoginViewUITests.swift in Sources */,
+				0E32571629CB8DE7008C2FAF /* HomeViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

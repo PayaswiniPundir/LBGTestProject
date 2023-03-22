@@ -49,7 +49,7 @@
                                         <constraint firstAttribute="height" constant="54" id="DUe-nb-52L"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-Yu-DQ4">
                                     <rect key="frame" x="0.0" y="190.00000000000003" width="369" height="40"/>

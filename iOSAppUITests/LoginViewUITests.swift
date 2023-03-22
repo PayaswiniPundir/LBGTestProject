@@ -21,8 +21,8 @@ final class LoginViewUITests: XCTestCase {
     func test_LoginFlow() {
         let email = app.textFields["Email"]
         email.tap()
-        email.typeText("Email")
-        let pwd = app.textFields["Password"]
+        email.typeText("jon@gmail.com")
+        let pwd = app.secureTextFields["Password"]
         pwd.tap()
         pwd.typeText("password")
         let button = app.buttons["Sign in"]

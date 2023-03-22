@@ -9,6 +9,7 @@ struct Strings {
     static let loginAlertDefaultBtn = "Ok"
     static let homeTableCellIdentifier = "HomeTableViewCell"
     static let homeTableViewAccessibility = "HomeViewController"
+    static let homeTableViewControllerAccessibility = "HomeTable"
     
     struct Network {
         static let errorMessage = "Please check your internet connection and try again"

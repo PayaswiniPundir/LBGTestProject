@@ -1,13 +1,25 @@
 import Combine
 
-final class LoginViewModel {
+final class LoginViewModel: ObservableObject {
     @Published var login: String = ""
     @Published var password: String = ""
     @Published var isLoading = false
     let validationResult = PassthroughSubject<Void, Error>()
     
-    private(set) lazy var isInputValid = Publishers.CombineLatest($login, $password)
-        .map { $0.count > 2 && $1.count > 2 }
+    private var isValidUsernamePublisher: AnyPublisher<Bool, Never> {
+            $login
+                .map { $0.isValidEmail }
+                .eraseToAnyPublisher()
+        }
+
+    private var isValidPasswordPublisher: AnyPublisher<Bool, Never> {
+        $password
+            .map { !$0.isEmpty }
+            .eraseToAnyPublisher()
+    }
+    
+    private(set) lazy var isInputValid = Publishers.CombineLatest(isValidUsernamePublisher, isValidPasswordPublisher)
+        .map { $0 && $1 }
         .eraseToAnyPublisher()
     
     private let loginValidator: LoginValidatorProtocol

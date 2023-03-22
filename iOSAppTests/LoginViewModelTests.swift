@@ -34,8 +34,8 @@ class LoginViewModelTests: XCTestCase {
         }
         .store(in: &cancellables)
     }
-    func test_whenBothAreLongerThanTwoCharacters() throws {
-        viewModel.login = "login"
+    func test_whenBothAreValidFields() throws {
+        viewModel.login = "john@gmail.com"
         viewModel.password = "password"
         viewModel.isInputValid.sink {
             XCTAssertTrue($0)

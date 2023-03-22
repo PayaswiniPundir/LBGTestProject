@@ -2,14 +2,14 @@ import Foundation
 import Combine
 
 protocol UserServiceProtocol {
-    func getData<T: Decodable>(endpoint: String) -> Future<T, Error>
+    func getData(endpoint: String) -> AnyPublisher<[UserModel], Error>
 }
 
 final class UserService: UserServiceProtocol {
     private var cancellables = Set<AnyCancellable>()
 
-    func getData<T>(endpoint: String) -> Future<T, Error> where T: Decodable {
-        return Future<T, Error> { [weak self] promise in
+    func getData(endpoint: String) -> AnyPublisher<[UserModel], Error> {
+        return Future<[UserModel], Error> { [weak self] promise in
             guard let self = self, let url = URL(string: endpoint) else {
                 return promise(.failure(NetworkError.invalidurl))
             }
@@ -23,7 +23,7 @@ final class UserService: UserServiceProtocol {
                     }
                     return data
                 }
-                .decode(type: T.self, decoder: JSONDecoder())
+                .decode(type: [UserModel].self, decoder: JSONDecoder())
                 .receive(on: RunLoop.main)
                 .sink(receiveCompletion: { completion in
                     if case let .failure(error) = completion {
@@ -36,9 +36,11 @@ final class UserService: UserServiceProtocol {
                             promise(.failure(NetworkError.unknownError))
                         }
                     }
-                }, receiveValue: { promise(.success($0)) })
+                }, receiveValue: { (output) in
+                    promise(.success(output)) })
                 .store(in: &self.cancellables)
         }
+        .eraseToAnyPublisher()
     }
 }
 
