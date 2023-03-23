@@ -19,4 +19,8 @@ struct Strings {
     struct ApiEndPoints {
         static let userApi = "https://jsonplaceholder.typicode.com/users"
     }
+    
+    struct Layout {
+        static let cornerRadiusForBtn = 10
+    }
 }

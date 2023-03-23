@@ -30,11 +30,11 @@ class LoginViewController: UIViewController {
         passwordTextField.backgroundColor = .systemBackground
         passwordTextField.placeholder = Strings.passwordPlaceholder
         contentView.backgroundColor = .stackBackground
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = CGFloat(Strings.Layout.cornerRadiusForBtn)
         signInButton.setTitle(Strings.signInButtonTitle, for: UIControl.State())
         signInButton.setTitleColor(.white, for: UIControl.State())
         signInButton.backgroundColor = .valid
-        signInButton.layer.cornerRadius = 10
+        signInButton.layer.cornerRadius = CGFloat(Strings.Layout.cornerRadiusForBtn)
     }
     
     private func setupBindings() {
@@ -47,8 +47,8 @@ class LoginViewController: UIViewController {
             .assign(to: \.password, on: viewModel)
             .store(in: &bindings)
         viewModel.isInputValid
-                .assign(to: \.isValid, on: signInButton)
-                .store(in: &bindings)
+            .assign(to: \.isValid, on: signInButton)
+            .store(in: &bindings)
         viewModel.validationResult.sink { completion in
             switch completion {
             case .finished:
@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func signInButtonTap(_sender: AnyObject) {
-            viewModel.validateLogin()
+        viewModel.validateLogin()
     }
     
     private func navigateToHome() {

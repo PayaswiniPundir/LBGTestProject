@@ -66,7 +66,7 @@ final class HomeViewController: UIViewController {
                 self?.homeTableView.reloadData()
             })
             .store(in: &bindings)
-            
+        
     }
 }
 

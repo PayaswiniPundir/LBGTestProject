@@ -7,11 +7,11 @@ final class LoginViewModel: ObservableObject {
     let validationResult = PassthroughSubject<Void, Error>()
     
     private var isValidUsernamePublisher: AnyPublisher<Bool, Never> {
-            $login
-                .map { $0.isValidEmail }
-                .eraseToAnyPublisher()
-        }
-
+        $login
+            .map { $0.isValidEmail }
+            .eraseToAnyPublisher()
+    }
+    
     private var isValidPasswordPublisher: AnyPublisher<Bool, Never> {
         $password
             .map { !$0.isEmpty }

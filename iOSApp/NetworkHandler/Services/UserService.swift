@@ -7,7 +7,7 @@ protocol UserServiceProtocol {
 
 final class UserService: UserServiceProtocol {
     private var cancellables = Set<AnyCancellable>()
-
+    
     func getData(endpoint: String) -> AnyPublisher<[UserModel], Error> {
         return Future<[UserModel], Error> { [weak self] promise in
             guard let self = self, let url = URL(string: endpoint) else {

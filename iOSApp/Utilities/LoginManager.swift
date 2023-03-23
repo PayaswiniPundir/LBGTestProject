@@ -17,5 +17,5 @@ final class LoginManager: LoginValidatorProtocol {
             DispatchQueue.main.asyncAfter(deadline: time) {
                 completion(.success(()))
             }
-    }
+        }
 }
