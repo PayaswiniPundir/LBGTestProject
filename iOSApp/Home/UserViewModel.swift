@@ -1,22 +1,24 @@
 import Combine
 import Foundation
 
-final class HomeViewModel {
+final class UserViewModel {
     private var cancellables = Set<AnyCancellable>()
     @Published var isLoading = false
     @Published var users: [UserModel] = []
     private let userService: UserServiceProtocol
+    var onErrorHandling: ((Error) -> Void)?
     
     init(userService: UserServiceProtocol = UserService()) {
         self.userService = userService
     }
     
-    func getData() {
+    func getUserData() {
         isLoading = true
-        userService.getData(endpoint: Strings.ApiEndPoints.userApi)
+        userService.getUserData(endpoint: Strings.ApiEndPoints.userApi)
             .sink { completion in
                 switch completion {
                 case .failure(let error):
+                    self.onErrorHandling?(error)
                     print("Error is \(error.localizedDescription)")
                 case .finished:
                     print("finished")

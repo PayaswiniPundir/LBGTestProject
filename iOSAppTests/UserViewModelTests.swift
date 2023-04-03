@@ -2,14 +2,14 @@ import XCTest
 import Combine
 @testable import iOSApp
 
-final class HomeViewModelTests: XCTestCase {
-    private var subject: HomeViewModel!
+final class UserViewModelTests: XCTestCase {
+    private var subject: UserViewModel!
     private var mockUserService: MockUserService!
     private var cancellables: Set<AnyCancellable> = []
     override func setUp() {
         super.setUp()
         mockUserService = MockUserService()
-        subject = HomeViewModel(userService: mockUserService)
+        subject = UserViewModel(userService: mockUserService)
     }
     override func tearDown() {
         cancellables.forEach { $0.cancel() }
@@ -20,18 +20,18 @@ final class HomeViewModelTests: XCTestCase {
     }
     func test_whenServiceIsCalled() {
         mockUserService.getResult = .success(Constants.users)
-        subject.getData()
+        subject.getUserData()
         XCTAssertEqual(mockUserService.getCallsCount, 1)
     }
     func test_whenServiceIsFailed() {
         mockUserService.getResult = .failure(MockError.error)
-        subject.getData()
+        subject.getUserData()
         subject.$users.sink { XCTAssert($0.isEmpty) }
             .store(in: &cancellables)
     }
 }
 
-extension HomeViewModelTests {
+extension UserViewModelTests {
     enum Constants {
         static let users = [
             UserModel(id: 0, name: "Jhn", email: "John@gmail.com", phone: "898989898989"),

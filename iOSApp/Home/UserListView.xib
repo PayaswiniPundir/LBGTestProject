@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="iOSApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserListViewController" customModule="iOSApp" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="Zsb-jY-ngv" id="R4c-1T-hn2"/>
-                <outlet property="homeTableView" destination="tho-V2-98O" id="3TB-Xi-iuB"/>
+                <outlet property="userTableView" destination="tho-V2-98O" id="3TB-Xi-iuB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="IC8-fY-oGZ"/>
             </connections>
         </placeholder>

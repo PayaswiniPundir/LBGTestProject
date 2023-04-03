@@ -27,7 +27,7 @@ final class LoginViewUITests: XCTestCase {
         pwd.typeText("password")
         let button = app.buttons["Sign in"]
         button.forceTapElement()
-        let dashBoardView = app.otherElements["HomeViewController"]
+        let dashBoardView = app.otherElements["UserListViewController"]
         let dashBoardShown = dashBoardView.waitForExistence(timeout: 10)
         XCTAssert(dashBoardShown)
     }

@@ -7,13 +7,17 @@ struct Strings {
     static let loginAlertMessage = "Enter valid login credentials"
     static let loginAlertTitle = "Empty Fields Alert"
     static let loginAlertDefaultBtn = "Ok"
-    static let homeTableCellIdentifier = "HomeTableViewCell"
-    static let homeTableViewAccessibility = "HomeViewController"
-    static let homeTableViewControllerAccessibility = "HomeTable"
+    static let homeTableCellIdentifier = "UserTableViewCell"
+    static let homeTableViewAccessibility = "UserListViewController"
+    static let homeTableViewControllerAccessibility = "UserTable"
     
     struct Network {
         static let errorMessage = "Please check your internet connection and try again"
         static let errorTitle = "No internet connection"
+    }
+    
+    struct APIError {
+        static let errorTitle = "API failure"
     }
     
     struct ApiEndPoints {

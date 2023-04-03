@@ -5,7 +5,7 @@ import Combine
 final class MockUserService: UserServiceProtocol {
     var getResult: Result<[UserModel], Error> = .success([])
     var getCallsCount: Int = 0
-    func getData(endpoint: String) -> AnyPublisher<[UserModel], Error> {
+    func getUserData(endpoint: String) -> AnyPublisher<[UserModel], Error> {
         getCallsCount += 1
         return getResult.publisher.eraseToAnyPublisher()
     }

@@ -1,19 +1,19 @@
 import UIKit
 import Combine
 
-final class HomeViewController: UIViewController {
-    @IBOutlet private var homeTableView: UITableView!
+final class UserListViewController: UIViewController {
+    @IBOutlet private var userTableView: UITableView!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     var isLoading: Bool = false {
         didSet { isLoading ? startLoading() : finishLoading() }
     }
     
-    private let viewModel: HomeViewModel
+    private let viewModel: UserViewModel
     private let connection: ConnectionStatusProtocol
     private var bindings = Set<AnyCancellable>()
     
-    init(viewModel: HomeViewModel = HomeViewModel(),
+    init(viewModel: UserViewModel = UserViewModel(),
          connection: ConnectionStatusProtocol = ConnectionStatus()) {
         self.viewModel = viewModel
         self.connection = connection
@@ -28,14 +28,20 @@ final class HomeViewController: UIViewController {
         setupView()
         setupBindings()
         view.accessibilityIdentifier = Strings.homeTableViewAccessibility
-        homeTableView.accessibilityIdentifier = Strings.homeTableViewAccessibility
+        userTableView.accessibilityIdentifier = Strings.homeTableViewAccessibility
     }
     
     private func setupView() {
         let nib = UINib(nibName: Strings.homeTableCellIdentifier, bundle: nil)
-        homeTableView.register(nib, forCellReuseIdentifier: Strings.homeTableCellIdentifier)
+        userTableView.register(nib, forCellReuseIdentifier: Strings.homeTableCellIdentifier)
         if connection.hasConnectivity() {
-            viewModel.getData()
+            viewModel.onErrorHandling = { error in
+                AlertManager.showAlert(forMessage: error.localizedDescription,
+                                       title: Strings.APIError.errorTitle,
+                                       defaultButtonTitle: Strings.loginAlertDefaultBtn,
+                                       sourceViewController: self)
+            }
+            viewModel.getUserData()
         } else {
             AlertManager.showAlert(forMessage: Strings.Network.errorMessage,
                                    title: Strings.Network.errorTitle,
@@ -45,13 +51,13 @@ final class HomeViewController: UIViewController {
     }
     
     func startLoading() {
-        self.homeTableView.isUserInteractionEnabled = false
+        self.userTableView.isUserInteractionEnabled = false
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
     }
     
     func finishLoading() {
-        self.homeTableView.isUserInteractionEnabled = true
+        self.userTableView.isUserInteractionEnabled = true
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
     }
@@ -63,7 +69,7 @@ final class HomeViewController: UIViewController {
         viewModel.$users
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] _ in
-                self?.homeTableView.reloadData()
+                self?.userTableView.reloadData()
             })
             .store(in: &bindings)
         
@@ -71,7 +77,7 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - TableView Data Source
-extension HomeViewController: UITableViewDataSource {
+extension UserListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         return viewModel.users.count
@@ -81,7 +87,7 @@ extension HomeViewController: UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: Strings.homeTableCellIdentifier,
-            for: indexPath) as? HomeTableViewCell {
+            for: indexPath) as? UserTableViewCell {
             if !viewModel.users.isEmpty {
                 cell.configure(viewModel.users[indexPath.row])
             }

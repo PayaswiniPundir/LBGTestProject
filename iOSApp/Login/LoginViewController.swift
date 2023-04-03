@@ -5,7 +5,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var contentView: UIView!
-    @IBOutlet var signInButton: UIButton!
+    @IBOutlet private var signInButton: UIButton!
     
     private let viewModel: LoginViewModel
     private var bindings = Set<AnyCancellable>()
@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
     }
     
     private func navigateToHome() {
-        let homeViewController = HomeViewController()
-        navigationController?.pushViewController(homeViewController, animated: true)
+        let userListViewController = UserListViewController()
+        navigationController?.pushViewController(userListViewController, animated: true)
     }
 }

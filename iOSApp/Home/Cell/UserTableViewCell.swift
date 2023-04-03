@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class UserTableViewCell: UITableViewCell {
     @IBOutlet private var userName: UILabel!
     @IBOutlet private var userEmail: UILabel!
     @IBOutlet private var userPhone: UILabel!

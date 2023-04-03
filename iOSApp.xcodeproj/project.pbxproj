@@ -12,7 +12,7 @@
 		0E32570029CB3AF3008C2FAF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3256FF29CB3AF3008C2FAF /* String.swift */; };
 		0E32570229CB6406008C2FAF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32570129CB6406008C2FAF /* UIButton.swift */; };
 		0E32571029CB8A16008C2FAF /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32570F29CB8A16008C2FAF /* MockUserService.swift */; };
-		0E32571229CB8AA0008C2FAF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */; };
+		0E32571229CB8AA0008C2FAF /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32571129CB8AA0008C2FAF /* UserViewModelTests.swift */; };
 		0E32571629CB8DE7008C2FAF /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32571529CB8DE7008C2FAF /* HomeViewUITests.swift */; };
 		0EE5414F29C85B910019194E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5414E29C85B910019194E /* UserService.swift */; };
 		0EF6233B29C3963A00CF7FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6233A29C3963A00CF7FAC /* AppDelegate.swift */; };
@@ -24,11 +24,11 @@
 		0EF6236D29C3971600CF7FAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6236C29C3971600CF7FAC /* LoginViewController.swift */; };
 		0EF6236F29C397CA00CF7FAC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6236E29C397CA00CF7FAC /* LoginViewModel.swift */; };
 		0EF6237129C4577000CF7FAC /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6237029C4577000CF7FAC /* LoginManager.swift */; };
-		0EF6237429C46E4100CF7FAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6237329C46E4100CF7FAC /* HomeViewController.swift */; };
-		0EF6237629C4810E00CF7FAC /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6237529C4810E00CF7FAC /* HomeView.xib */; };
-		0EF6237A29C49E9400CF7FAC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6237929C49E9400CF7FAC /* HomeViewModel.swift */; };
-		0EF6238429C5A46400CF7FAC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6238229C5A46400CF7FAC /* HomeTableViewCell.swift */; };
-		0EF6238529C5A46400CF7FAC /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6238329C5A46400CF7FAC /* HomeTableViewCell.xib */; };
+		0EF6237429C46E4100CF7FAC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6237329C46E4100CF7FAC /* UserListViewController.swift */; };
+		0EF6237629C4810E00CF7FAC /* UserListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6237529C4810E00CF7FAC /* UserListView.xib */; };
+		0EF6237A29C49E9400CF7FAC /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6237929C49E9400CF7FAC /* UserViewModel.swift */; };
+		0EF6238429C5A46400CF7FAC /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6238229C5A46400CF7FAC /* UserTableViewCell.swift */; };
+		0EF6238529C5A46400CF7FAC /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6238329C5A46400CF7FAC /* UserTableViewCell.xib */; };
 		0EF6239829C6280B00CF7FAC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6239729C6280B00CF7FAC /* Font.swift */; };
 		0EF6239A29C6290700CF7FAC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6239929C6290700CF7FAC /* Strings.swift */; };
 		0EF6239C29C62A5400CF7FAC /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF6239B29C62A5400CF7FAC /* ColorAssets.xcassets */; };
@@ -65,7 +65,7 @@
 		0E3256FF29CB3AF3008C2FAF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		0E32570129CB6406008C2FAF /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		0E32570F29CB8A16008C2FAF /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
-		0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0E32571129CB8AA0008C2FAF /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		0E32571529CB8DE7008C2FAF /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
 		0EE5414E29C85B910019194E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0EF6233729C3963A00CF7FAC /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,11 +81,11 @@
 		0EF6236C29C3971600CF7FAC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0EF6236E29C397CA00CF7FAC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0EF6237029C4577000CF7FAC /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
-		0EF6237329C46E4100CF7FAC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0EF6237529C4810E00CF7FAC /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
-		0EF6237929C49E9400CF7FAC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		0EF6238229C5A46400CF7FAC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		0EF6238329C5A46400CF7FAC /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		0EF6237329C46E4100CF7FAC /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		0EF6237529C4810E00CF7FAC /* UserListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListView.xib; sourceTree = "<group>"; };
+		0EF6237929C49E9400CF7FAC /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		0EF6238229C5A46400CF7FAC /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		0EF6238329C5A46400CF7FAC /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		0EF6239729C6280B00CF7FAC /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0EF6239929C6290700CF7FAC /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0EF6239B29C62A5400CF7FAC /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
@@ -153,7 +153,6 @@
 				0EF6237729C495B100CF7FAC /* Login */,
 				0EF6237829C4962800CF7FAC /* Home */,
 				0EF6237229C469F800CF7FAC /* Extensions */,
-				0EF623B229C77A1B00CF7FAC /* Mocks */,
 				0EF6233A29C3963A00CF7FAC /* AppDelegate.swift */,
 				0EF6233C29C3963A00CF7FAC /* SceneDelegate.swift */,
 				0EF6234029C3963A00CF7FAC /* Main.storyboard */,
@@ -169,8 +168,9 @@
 		0EF6235029C3963C00CF7FAC /* iOSAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0EF623B229C77A1B00CF7FAC /* Mocks */,
 				0EF623AC29C7705E00CF7FAC /* LoginViewModelTests.swift */,
-				0E32571129CB8AA0008C2FAF /* HomeViewModelTests.swift */,
+				0E32571129CB8AA0008C2FAF /* UserViewModelTests.swift */,
 			);
 			path = iOSAppTests;
 			sourceTree = "<group>";
@@ -210,9 +210,9 @@
 			children = (
 				0EF6238729C5A9C200CF7FAC /* Model */,
 				0EF6238629C5A78100CF7FAC /* Cell */,
-				0EF6237529C4810E00CF7FAC /* HomeView.xib */,
-				0EF6237929C49E9400CF7FAC /* HomeViewModel.swift */,
-				0EF6237329C46E4100CF7FAC /* HomeViewController.swift */,
+				0EF6237529C4810E00CF7FAC /* UserListView.xib */,
+				0EF6237929C49E9400CF7FAC /* UserViewModel.swift */,
+				0EF6237329C46E4100CF7FAC /* UserListViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -220,8 +220,8 @@
 		0EF6238629C5A78100CF7FAC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0EF6238229C5A46400CF7FAC /* HomeTableViewCell.swift */,
-				0EF6238329C5A46400CF7FAC /* HomeTableViewCell.xib */,
+				0EF6238229C5A46400CF7FAC /* UserTableViewCell.swift */,
+				0EF6238329C5A46400CF7FAC /* UserTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -395,8 +395,8 @@
 				0EF6236B29C396F300CF7FAC /* LoginView.xib in Resources */,
 				0EF6234229C3963A00CF7FAC /* Main.storyboard in Resources */,
 				0EF6239C29C62A5400CF7FAC /* ColorAssets.xcassets in Resources */,
-				0EF6238529C5A46400CF7FAC /* HomeTableViewCell.xib in Resources */,
-				0EF6237629C4810E00CF7FAC /* HomeView.xib in Resources */,
+				0EF6238529C5A46400CF7FAC /* UserTableViewCell.xib in Resources */,
+				0EF6237629C4810E00CF7FAC /* UserListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,16 +449,16 @@
 				0EF623AB29C76CF200CF7FAC /* ConnectionStatus.swift in Sources */,
 				0EF6239E29C62B4000CF7FAC /* UIColor.swift in Sources */,
 				0EF6236D29C3971600CF7FAC /* LoginViewController.swift in Sources */,
-				0EF6237A29C49E9400CF7FAC /* HomeViewModel.swift in Sources */,
+				0EF6237A29C49E9400CF7FAC /* UserViewModel.swift in Sources */,
 				0EF6233B29C3963A00CF7FAC /* AppDelegate.swift in Sources */,
 				0EF6236F29C397CA00CF7FAC /* LoginViewModel.swift in Sources */,
 				0E3256FC29C86CE2008C2FAF /* UITextField.swift in Sources */,
 				0EF6239A29C6290700CF7FAC /* Strings.swift in Sources */,
-				0EF6238429C5A46400CF7FAC /* HomeTableViewCell.swift in Sources */,
+				0EF6238429C5A46400CF7FAC /* UserTableViewCell.swift in Sources */,
 				0EF6239829C6280B00CF7FAC /* Font.swift in Sources */,
 				0EF6233D29C3963A00CF7FAC /* SceneDelegate.swift in Sources */,
 				0E32570029CB3AF3008C2FAF /* String.swift in Sources */,
-				0EF6237429C46E4100CF7FAC /* HomeViewController.swift in Sources */,
+				0EF6237429C46E4100CF7FAC /* UserListViewController.swift in Sources */,
 				0EF623B129C7795800CF7FAC /* UserModel.swift in Sources */,
 				0E32570229CB6406008C2FAF /* UIButton.swift in Sources */,
 			);
@@ -469,7 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E32571029CB8A16008C2FAF /* MockUserService.swift in Sources */,
-				0E32571229CB8AA0008C2FAF /* HomeViewModelTests.swift in Sources */,
+				0E32571229CB8AA0008C2FAF /* UserViewModelTests.swift in Sources */,
 				0EF623AD29C7705E00CF7FAC /* LoginViewModelTests.swift in Sources */,
 				0EF623AF29C772B400CF7FAC /* MockLoginManager.swift in Sources */,
 			);

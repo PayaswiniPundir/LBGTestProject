@@ -8,8 +8,7 @@ final class HomeViewUITests: XCTestCase {
         app.launchArguments = ["testing"]
         app.launch()
     }
-    func test_HomeMainViewcontroller() {
-        let myTable = app.tables.matching(identifier: "HomeTable" )
+    func test_UserListViewcontroller() {
         let email = app.textFields["Email"]
         email.tap()
         email.typeText("john@gmail.com")
@@ -17,7 +16,7 @@ final class HomeViewUITests: XCTestCase {
         pwd.tap()
         pwd.typeText("password")
         app.staticTexts["Sign in"].tap()
-        let dashBoardView = app.tables["HomeViewController"]
+        let dashBoardView = app.tables["UserListViewController"]
             .staticTexts["Nathan@yesenia.net"]
         let dashBoardShown = dashBoardView.waitForExistence(timeout: 10)
         XCTAssert(dashBoardShown)
